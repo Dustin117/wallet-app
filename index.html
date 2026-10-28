@@ -12,15 +12,27 @@
     <link rel="preconnect" href="https://krypto-relay.dustin-m-shamp.workers.dev" crossorigin />
     <link rel="preconnect" href="https://api.mainnet-beta.solana.com" crossorigin />
     <link rel="preconnect" href="https://pumpportal.fun" crossorigin />
-    <link rel="preload" as="image" href="./oni-1.webp" type="image/webp" fetchpriority="low" />
-    <link rel="preload" as="image" href="./hacker-1.webp" type="image/webp" fetchpriority="low" />
+    <link rel="preload" as="image" href="./oni-1.webp" type="image/webp" />
     <!-- The bot reads this to tag its links, so phones load the newest version. -->
-    <meta name="app-version" content="15.23" />
+    <meta name="app-version" content="15.25" />
     <title>Krypto Snatcher</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script type="module" crossorigin src="./app-tydjXnQn.js"></script>
+    <!-- The first screen, drawn before any code arrives (v15.24): the app replaces it when it starts. -->
+    <style>
+      html, body { margin: 0; background: #05010f; color: #e8f9ff; }
+      .boot { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; font-family: ui-monospace, Menlo, monospace; }
+      .boot .oni { font-size: 88px; line-height: 1; color: #ff2bd6; text-shadow: 0 0 18px #ff2bd6, 2px 0 #00f0ff; animation: bootpulse 1.2s ease-in-out infinite alternate; }
+      .boot .name { font: 700 20px/1 system-ui, sans-serif; letter-spacing: 0.22em; color: #00f0ff; text-shadow: 0 0 10px #00f0ff; }
+      .boot .term { font-size: 13px; color: #8f9cc8; }
+      .boot .term b { display: inline-block; width: 0.6em; height: 1em; vertical-align: -2px; background: #39ff88; animation: bootblink 0.9s steps(1) infinite; }
+      @keyframes bootpulse { from { opacity: 0.55; } to { opacity: 1; } }
+      @keyframes bootblink { 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .boot .oni, .boot .term b { animation: none; } }
+    </style>
+    <script type="module" crossorigin src="./app-Bw2vCKY8.js"></script>
   </head>
   <body>
-    <main id="app"></main>
+    <main id="app"><div class="boot" aria-label="Loading"><div class="oni">盗</div><div class="name">KRYPTO SNATCHER</div><div class="term">$ ./objective --boot <b></b></div></div></main>
+    <!-- Telegram's script after the first screen, so a slow answer from telegram.org never leaves the page blank. -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </body>
 </html>
