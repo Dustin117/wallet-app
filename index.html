@@ -6,7 +6,7 @@
     <!-- This page holds keys, so it may only talk to Jupiter (to buy), Solana network nodes (balances, transfers) and Coinbase/CoinGecko (past SOL prices for Wallet P&L). Its code and the two loading-screen pictures come only from this app's own folder; coin pictures only from Helius's image server. No code written into the page itself runs. -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'none'; script-src https://dustin117.github.io/wallet-app/ https://telegram.org; style-src 'unsafe-inline'; font-src data:; media-src https://dustin117.github.io/wallet-app/ blob:; img-src data: blob: https://dustin117.github.io/wallet-app/ https://cdn.helius-rpc.com https://t.me; connect-src https://dustin117.github.io/wallet-app/ https://krypto-relay.dustin-m-shamp.workers.dev https://api.geckoterminal.com https://api.exchange.coinbase.com https://api.coingecko.com https://api.jup.ag https://pumpportal.fun https://mainnet.helius-rpc.com https://api.mainnet.solana.com https://api.mainnet-beta.solana.com; form-action 'none'; base-uri 'none'"
+      content="default-src 'none'; script-src https://dustin117.github.io/wallet-app/ https://telegram.org; style-src 'unsafe-inline'; font-src data:; media-src https://dustin117.github.io/wallet-app/ blob:; img-src data: blob: https://dustin117.github.io/wallet-app/ https://cdn.helius-rpc.com https://t.me https://assets.geckoterminal.com https://coin-images.coingecko.com https://assets.coingecko.com; connect-src https://dustin117.github.io/wallet-app/ https://krypto-relay.dustin-m-shamp.workers.dev https://api.geckoterminal.com https://api.exchange.coinbase.com https://api.coingecko.com https://api.jup.ag https://pumpportal.fun https://mainnet.helius-rpc.com https://api.mainnet.solana.com https://api.mainnet-beta.solana.com; form-action 'none'; base-uri 'none'"
     />
     <!-- Start the connections and the loading-screen pictures while the code loads. -->
     <link rel="preconnect" href="https://krypto-relay.dustin-m-shamp.workers.dev" crossorigin />
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://pumpportal.fun" crossorigin />
     <link rel="preload" as="image" href="./oni-1.webp" type="image/webp" />
     <!-- The bot reads this to tag its links, so phones load the newest version. -->
-    <meta name="app-version" content="15.79" />
+    <meta name="app-version" content="15.81" />
     <title>Krypto Snatcher</title>
     <!-- The first screen, drawn before any code arrives (v15.24): the app replaces it when it starts. -->
     <style>
@@ -28,7 +28,7 @@
       @keyframes bootblink { 50% { opacity: 0; } }
       @media (prefers-reduced-motion: reduce) { .boot .oni, .boot .term b { animation: none; } }
     </style>
-    <script type="module" crossorigin src="./app-C-tAhvZd.js"></script>
+    <script type="module" crossorigin src="./app-DprubgWC.js"></script>
   </head>
   <body>
     <main id="app"><div class="boot" aria-label="Loading"><div class="oni">盗</div><div class="name">KRYPTO SNATCHER</div><div class="term">$ ./objective --boot <b></b></div></div></main>
